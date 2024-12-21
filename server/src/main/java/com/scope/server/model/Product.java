@@ -16,8 +16,6 @@ import java.util.Date;
 @NoArgsConstructor
 public class Product {
 
-    private ProductService productService;
-
     @Id
     private int id;
     private String name;
