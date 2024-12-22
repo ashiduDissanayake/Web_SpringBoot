@@ -1,5 +1,6 @@
 package com.scope.server.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.scope.server.service.ProductService;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -23,6 +24,7 @@ public class Product {
     private String brand;
     private BigDecimal price;
     private String category;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     private Date releaseDate;
     private Boolean available;
     private int quantity;
